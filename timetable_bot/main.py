@@ -5,6 +5,7 @@ from telebot import types
 
 token = "2138524818:AAF1mpDhqDr8NGBwQVeFWI5LoqPXl8Bua1Y"
 bot = telebot.TeleBot(token)
+date = datetime.date.today().isocalendar()[1]
 
 conn = psycopg2.connect(database="postgres",
                         user="postgres",
@@ -28,9 +29,31 @@ def start(message):
     bot.send_message(message.chat.id, 'Здесь можно посмотреть расписание БФИ2102', reply_markup=keyboard)
 
 
+@bot.message_handler(commands=['week'])
+def week(message):
+    if date % 2 == 0:
+        bot.send_message(message.chat.id, 'Сейчас нижняя неделя')
+    if date % 2 == 1:
+        bot.send_message(message.chat.id, 'Сейчас верхняя неделя')
+
+
+@bot.message_handler(commands=['mtuci'])
+def mtuci(message):
+    bot.send_message(message.chat.id, 'https://mtuci.ru/')
+
+
+@bot.message_handler(commands=['help'])
+def start_message(message):
+    bot.send_message(message.chat.id, '''Этот бот присылает расписание БФИ2102: по дням недели, на текущую и следующую неделю.
+Бот автоматически определяет какая учебная неделя идет на данный момент.
+    
+/week - Текущая неделя
+/help - Помощь
+/mtuci - Ссылка на официальный сайт МТУСИ''')
+
+
 @bot.message_handler(content_types=['text'])
 def evenodd(message):
-    date = datetime.date.today().isocalendar()[1]
     days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница']
     final = []
 
@@ -67,7 +90,7 @@ def evenodd(message):
                     result.append('\n')
             bot.send_message(message.chat.id, '_____' + day + '_____' + '\n' + '\n' + ''.join(result))
 
-    if message.text == 'Расписание на текущую неделю':
+    elif message.text == 'Расписание на текущую неделю':
 
         if date % 2 == 1:
             select_timetable = "SELECT day, subject, room_numb, start_time FROM service.timetable"
@@ -104,7 +127,7 @@ def evenodd(message):
                 final.append('_____' + day + '_____' + '\n' + '\n' + ''.join(result) + '\n')
             bot.send_message(message.chat.id, ''.join(final))
 
-    if message.text == 'Расписание на следующую неделю':
+    elif message.text == 'Расписание на следующую неделю':
 
         if date % 2 == 0:
             select_timetable = "SELECT day, subject, room_numb, start_time FROM service.timetable"
@@ -140,6 +163,9 @@ def evenodd(message):
                     result.append('\n')
                 final.append('_____' + day + '_____' + '\n' + '\n' + ''.join(result) + '\n')
             bot.send_message(message.chat.id, ''.join(final))
+
+    else:
+        bot.send_message(message.chat.id, 'Я Вас не понял. Повторите запрос.')
 
 
 bot.polling()

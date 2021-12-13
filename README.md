@@ -5,6 +5,7 @@ Calculator on Python that performs the simplest operations on numbers. The progr
 
 ## [Simple-bot](https://github.com/Glazapolzet/MTUCI/tree/main/Simple-bot)
 Python telegram bot that executes 5 different commands and responds to text requests.
+####
 List of bot commands:
 - /start - start the bot with a welcome message ('Hello! Do you want to know the latest information about MTUCI?').
 - /help - list of commands
@@ -23,6 +24,7 @@ A blog based on the capabilities of the flask module. The application supports u
 
 ## [timetable_bot](https://github.com/Glazapolzet/MTUCI/tree/main/timetable_bot)
 A telegram bot on Python that sends the BFI2102 schedule. The program automatically determines the parity of the current week using the "datetime" library.
+####
 The bot supports the following commands:
 - "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" - sends the schedule for the specified day.
 - "Schedule for the current week" - sends the schedule for the current week.

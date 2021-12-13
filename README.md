@@ -1,4 +1,5 @@
 # **MTUCI**
+
 ## [Calculus](https://github.com/Glazapolzet/MTUCI/tree/main/Calculus)
 Calculator on Python that performs the simplest operations on numbers. The program supports 4 mathematical operations: multiplication, division, addition and subtraction. Also it can handle floating point and negative sign numbers.
 
@@ -26,8 +27,8 @@ The bot supports the following commands:
 - "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" - sends the schedule for the specified day.
 - "Schedule for the current week" - sends the schedule for the current week.
 - "Schedule for the next week" - sends the schedule for the next week.
-- /week - Specifies the top or bottom of the current week.
-- /help - Sends a list of bot commands.
-- /mtuci - Sends a link to the official MTUCI website.
+- /week - specifies the top or bottom of the current week.
+- /help - sends a list of bot commands.
+- /mtuci - sends a link to the official MTUCI website.
 ####
 The bot displays an error message if the entered message does not belong to the list of commands. 

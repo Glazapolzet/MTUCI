@@ -23,7 +23,7 @@ Database visualization on Python that uses PostgreSQL and PyQt5 module. Displays
 A blog based on the capabilities of the flask module. The application supports user registration, which is carried out by entering user data into the database. When you log into your account, the program returns a welcoming message which contains the name specified during user registration. 
 
 ## [timetable_bot](https://github.com/Glazapolzet/MTUCI/tree/main/timetable_bot)
-A telegram bot on Python that sends the BFI2102 schedule. The program automatically determines the parity of the current week using the "datetime" library.
+A telegram bot on Python that sends the BFI2102 schedule. The program automatically determines type of the current week using the "datetime" library.
 ####
 The bot supports the following commands:
 - "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" - sends the schedule for the specified day.

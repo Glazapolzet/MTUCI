@@ -13,7 +13,7 @@ List of bot commands:
 - /webm - send a video from file
 - /joke - send a random joke
 ####
-The text message "I want" in response to the welcome message returns a link to the official website of MTUCI. 
+The text message "I want" in response to the welcoming message returns a link to the official website of MTUCI. 
 
 ## [Ui_Shedule](https://github.com/Glazapolzet/MTUCI/tree/main/Ui_Shedule)
 Database visualization on Python that uses PostgreSQL and PyQt5 module. Displays the database in the form of a tabbed table and allows you to edit its lines, as well as add and delete the contents of the database. 

@@ -1,7 +1,7 @@
 # **MTUCI**
 
 ## [Calculus](https://github.com/Glazapolzet/MTUCI/tree/main/Calculus)
-Calculator on Python that performs the simplest operations on numbers. The program supports 4 mathematical operations: multiplication, division, addition and subtraction. Also it can handle floating point and negative sign numbers.
+Calculator on Python that performs the simplest operations on numbers. The program supports 4 mathematical operations: multiplication, division, addition and subtraction. Also it handles floating point and negative sign numbers.
 
 ## [Simple-bot](https://github.com/Glazapolzet/MTUCI/tree/main/Simple-bot)
 Python telegram bot that executes 5 different commands and responds to text requests.

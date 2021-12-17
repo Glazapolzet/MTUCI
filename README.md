@@ -7,7 +7,6 @@ This application uses the following libraries:
 - `PyQt5`
 - `sys` 
 
-
 ## [Simple-bot](https://github.com/Glazapolzet/MTUCI/tree/main/Simple-bot)
 Python telegram bot that executes 5 different commands and responds to text requests.
 ####
@@ -21,25 +20,24 @@ List of bot commands:
 The text message "I want" in response to the welcoming message returns a link to the official website of MTUCI. 
 ####
 This application uses the following libraries:
-- `flask`
+- `pyTelegramBotAPI`
 - `requests`
-- `psycopg2`
 
 ## [Ui_Shedule](https://github.com/Glazapolzet/MTUCI/tree/main/Ui_Shedule)
 Database visualization on Python that uses PostgreSQL and PyQt5 module. Displays the database in the form of a tabbed table and allows you to edit its lines, as well as add and delete the contents of the database. 
 ####
 This application uses the following libraries:
-- `telebot`
-- `requests`
+- `psycopg2`
+- `sys`
+- `datetime`
 
 ## [microblog](https://github.com/Glazapolzet/MTUCI/tree/main/microblog)
 A blog based on the capabilities of the flask module. The application supports user registration, which is carried out by entering user data into the database. When you log into your account, the program returns a welcoming message which contains the name specified during user registration. 
 ####
 This application uses the following libraries:
-- `datetime`
+- `flask`
+- `requests`
 - `psycopg2`
-- `telebot`
-
 
 ## [timetable_bot](https://github.com/Glazapolzet/MTUCI/tree/main/timetable_bot)
 A telegram bot on Python that sends the BFI2102 schedule. The program automatically determines the type of the current week using the "datetime" library.
@@ -55,8 +53,7 @@ The bot supports the following commands:
 The bot displays an error message if the entered message does not belong to the list of commands. 
 ####
 This application uses the following libraries:
-- `psycopg2`
-- `sys`
 - `datetime`
-- `time`
+- `psycopg2`
+- `pyTelegramBotAPI`
 
